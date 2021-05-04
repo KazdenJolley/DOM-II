@@ -19,3 +19,11 @@ function rotate(event) {
     busImg.style.transform = `rotate(${scale}deg)`
 }
 busImg.addEventListener('wheel', rotate);
+
+const busTitle = document.querySelector('.intro h2');
+function large(event) {
+    debugger;
+    event.preventDefault();
+    busTitle.style.fontSize = '6rem';
+}
+busTitle.addEventListener('dblclick', large);
