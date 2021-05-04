@@ -75,3 +75,15 @@ const title = document.querySelector('title');
 document.addEventListener('DOMContentLoaded', (event) => {
     title.textContent = 'Look at me!!';
 })
+
+// nest two events
+const pick = document.querySelector('.content-pick');
+function black(event) {
+    pick.style.backgroundColor = 'black';
+    pick.style.color = 'white';
+}
+pick.addEventListener('click', black);
+const sunFun = document.querySelector('.content-pick div:nth-of-type(1)');
+sunFun.addEventListener('click', (event) => {
+    event.stopPropagation();
+})
